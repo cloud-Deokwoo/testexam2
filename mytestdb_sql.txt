@@ -1,0 +1,21 @@
+DB사용자 계정 : mytest/mytest
+
+database 이름 : test
+
+create table users(
+    id varchar(50) primary key not null,
+    pw varchar(50) not null,
+    name varchar(50) not null,
+    email varchar(50),
+    address varchar(100),
+    regdate datetime default current_timestamp
+);
+
+create table board (
+    num int primary key auto_increment,
+    writer varchar(50) not null,
+    title varchar(50) not null,
+    content varchar(2000),
+    regdate datetime default current_timestamp, 
+    hit int default 0
+);
